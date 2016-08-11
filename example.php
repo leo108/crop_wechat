@@ -25,6 +25,7 @@ $config->addAgent('test', 1, 'token', 'aesKey');
 //创建接口操作对象
 $wx = new CorpWeChat($config);
 //回调模式接受消息和事件,handleAgentCallBack会自动处理微信服务器发来的验证URL请求,开发者无需再次处理
+//其中$request参数必须是一个Psr\Http\Message\RequestInterface对象,请根据自己的框架自行构建
 echo $wx->handleAgentCallBack('test', $request, function (RequestMessage $message) {
     return new TextMessage('message type:'.$message->MsgType);
 });
