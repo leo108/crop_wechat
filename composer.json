@@ -1,0 +1,34 @@
+{
+    "name": "leo108/wechat_qy",
+    "description": "非官方微信企业号SDK",
+    "keywords": [
+        "wechat",
+        "weixin",
+        "weixin-sdk",
+        "wechat-sdk",
+        "微信",
+        "企业微信"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "leo108",
+            "homepage": "https://github.com/leo108",
+            "email": "leo108@qq.com"
+        }
+    ],
+    "require": {
+        "php": "^5.5",
+        "ext-openssl": "*",
+        "psr/log": "^1.0",
+        "guzzlehttp/guzzle": "^6.2",
+        "psr/cache": "^1.0",
+        "fig/cache-util": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "CorpWeChat\\": "src/CorpWeChat/"
+        }
+    }
+}
