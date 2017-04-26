@@ -6,11 +6,11 @@
  * Time: 14:30
  */
 
-namespace CorpWeChat\Models;
+namespace Leo108\CorpWeChat\Models;
 
 /**
  * Class Chat
- * @package CorpWeChat\Models
+ * @package Leo108\CorpWeChat\Models
  */
 class Chat
 {

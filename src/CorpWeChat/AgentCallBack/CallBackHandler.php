@@ -6,20 +6,21 @@
  * Time: 16:48
  */
 
-namespace CorpWeChat\AgentCallBack;
+namespace Leo108\CorpWeChat\AgentCallBack;
 
 use Psr\Http\Message\RequestInterface;
-use CorpWeChat\Exceptions\InvalidArgumentException;
-use CorpWeChat\Models\Messages\Interfaces\ResponseMessageInterface;
-use CorpWeChat\Models\Messages\RequestMessage;
-use CorpWeChat\Utils\Crypt;
-use CorpWeChat\Utils\XML;
-use CorpWeChat\CorpWeChat;
+use Leo108\CorpWeChat\Exceptions\InvalidArgumentException;
+use Leo108\CorpWeChat\Models\Messages\Interfaces\ResponseMessageInterface;
+use Leo108\CorpWeChat\Models\Messages\RequestMessage;
+use Leo108\CorpWeChat\Utils\Crypt;
+use Leo108\CorpWeChat\Utils\XML;
+use Leo108\CorpWeChat\CorpWeChat;
 
 /**
  * 接受消息并处理
  * Class CallBackHandler
- * @package CorpWeChat\AgentCallBack
+ *
+ * @package Leo108\CorpWeChat\AgentCallBack
  */
 class CallBackHandler
 {
@@ -35,12 +36,14 @@ class CallBackHandler
 
     /**
      * 解密后的消息
+     *
      * @var RequestMessage
      */
     protected $requestMessage;
 
     /**
      * BaseCallBack constructor.
+     *
      * @param string     $name
      * @param CorpWeChat $wx
      */
@@ -56,8 +59,10 @@ class CallBackHandler
 
     /**
      * 将消息解密后交给用户定义的函数处理
+     *
      * @param RequestInterface $request
      * @param callable         $handler 消息处理函数
+     *
      * @return string
      */
     public function handle(RequestInterface $request, callable $handler)
@@ -85,7 +90,9 @@ class CallBackHandler
 
     /**
      * 将消息转为xml格式
+     *
      * @param ResponseMessageInterface $responseMessage
+     *
      * @return string
      */
     protected function response(ResponseMessageInterface $responseMessage)

@@ -6,12 +6,12 @@
  * Time: 13:33
  */
 
-namespace CorpWeChat\Models;
+namespace Leo108\CorpWeChat\Models;
 
 /**
  * 应用设置
  * Class AgentSetting
- * @package CorpWeChat\Models
+ * @package Leo108\CorpWeChat\Models
  */
 class AgentSetting
 {

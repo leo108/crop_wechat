@@ -6,18 +6,18 @@
  * Time: 11:33
  */
 
-namespace CorpWeChat\Api;
+namespace Leo108\CorpWeChat\Api;
 
 use GuzzleHttp\HandlerStack;
-use CorpWeChat\Response\BaseResponse;
-use CorpWeChat\CorpWeChat;
+use Leo108\CorpWeChat\CorpWeChat;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Middleware;
 
 /**
  * Class AbstractApi
- * @package CorpWeChat\Api
+ *
+ * @package Leo108\CorpWeChat\Api
  */
 abstract class AbstractApi
 {
@@ -33,6 +33,7 @@ abstract class AbstractApi
 
     /**
      * BaseApi constructor.
+     *
      * @param CorpWeChat $wx
      */
     public function __construct(CorpWeChat $wx)
@@ -42,31 +43,33 @@ abstract class AbstractApi
 
     /**
      * Get方式请求
-     * @param string       $api
-     * @param array        $param Get参数
-     * @param BaseResponse $response
-     * @param array        $options
-     * @return BaseResponse
+     *
+     * @param string $api
+     * @param array  $param Get参数
+     * @param array  $options
+     *
+     * @return ResponseInterface
      */
-    protected function httpGet($api, $param, BaseResponse $response, array $options = [])
+    protected function httpGet($api, $param, array $options = [])
     {
         $api = self::BASE_API_URL.$api;
         if (!empty($param)) {
             $api = $api.'?'.http_build_query($param);
         }
 
-        return $this->httpRequest('GET', $api, $response, $options);
+        return $this->httpRequest('GET', $api, $options);
     }
 
     /**
      * 上传文件
-     * @param string       $api
-     * @param array        $files key => value 格式的数组,key为参数名,value可以是文件内容、fopen的句柄或者Psr\Http\Message\StreamInterface
-     * @param BaseResponse $response
-     * @param array        $options
-     * @return BaseResponse
+     *
+     * @param string $api
+     * @param array  $files key => value 格式的数组,key为参数名,value可以是文件内容、fopen的句柄或者Psr\Http\Message\StreamInterface
+     * @param array  $options
+     *
+     * @return ResponseInterface
      */
-    protected function httpUpload($api, $files, BaseResponse $response, array $options = [])
+    protected function httpUpload($api, $files, array $options = [])
     {
         $api                  = self::BASE_API_URL.$api;
         $options['multipart'] = [];
@@ -77,42 +80,43 @@ abstract class AbstractApi
             ];
         }
 
-        return $this->httpRequest('POST', $api, $response, $options);
+        return $this->httpRequest('POST', $api, $options);
     }
 
     /**
      * Post方式请求,数据以JSON格式传输
-     * @param string       $api
-     * @param array        $param
-     * @param BaseResponse $response
-     * @param array        $options
-     * @return BaseResponse
+     *
+     * @param string $api
+     * @param array  $param
+     * @param array  $options
+     *
+     * @return ResponseInterface
      */
-    protected function httpPostJson($api, $param, BaseResponse $response, array $options = [])
+    protected function httpPostJson($api, $param, array $options = [])
     {
         $api             = self::BASE_API_URL.$api;
         $options['json'] = $param;
 
-        return $this->httpRequest('POST', $api, $response, $options);
+        return $this->httpRequest('POST', $api, $options);
     }
 
     /**
      * 发起http请求
-     * @param string       $method
-     * @param string       $url
-     * @param BaseResponse $response
-     * @param array        $options
-     * @return BaseResponse
+     *
+     * @param string $method
+     * @param string $url
+     * @param array  $options
+     *
+     * @return ResponseInterface
      */
-    protected function httpRequest($method, $url, BaseResponse $response, $options = [])
+    protected function httpRequest($method, $url, $options = [])
     {
         $options['handler'] = $this->createHandler();
         $this->wx->getLog()->debug(sprintf('WeChat request: %s %s', $method, $url), $options);
         $origin = $this->wx->getHttpClient()->request($method, $url, $options);
-        $response->setOriginResponse($origin);
-        $this->wx->getLog()->debug(sprintf('WeChat response: code: %d'));
+        $this->wx->getLog()->debug(sprintf('WeChat response: code: %d', $origin->getStatusCode()));
 
-        return $response;
+        return $origin;
     }
 
     /**
@@ -134,7 +138,7 @@ abstract class AbstractApi
                 }
 
                 //不是json串,不重试
-                if (stripos($response->getHeader('Content-Type'), 'json') === false) {
+                if (stripos($response->getHeader('Content-Type')[0], 'json') === false) {
                     return false;
                 }
 
@@ -175,7 +179,7 @@ abstract class AbstractApi
                 }
 
                 //其他情况在uri后加入access_token参数
-                $this->attachAccessToken($request);
+                $request = $this->attachAccessToken($request);
 
                 return $handler($request, $options);
             };
@@ -184,14 +188,19 @@ abstract class AbstractApi
 
     /**
      * 在请求的url后加上access token参数
+     *
      * @param RequestInterface $request
      * @param bool             $cache
+     *
+     * @return RequestInterface
      */
     private function attachAccessToken(RequestInterface $request, $cache = true)
     {
         $query                 = \GuzzleHttp\Psr7\parse_query($request->getUri()->getQuery());
         $query['access_token'] = $this->wx->getAccessToken($cache);
-        $request->withUri(http_build_query($query));
+        $uri                   = $request->getUri()->withQuery(http_build_query($query));
+
+        return $request->withUri($uri);
     }
 
     /**

@@ -6,13 +6,13 @@
  * Time: 10:15
  */
 
-namespace CorpWeChat\Models\Messages\Traits;
+namespace Leo108\CorpWeChat\Models\Messages\Traits;
 
-use CorpWeChat\Models\Messages\Users\ChatReceiver;
+use Leo108\CorpWeChat\Models\Messages\Users\ChatReceiver;
 
 /**
  * Class ChatMessageTrait
- * @package CorpWeChat\Models\Messages\Traits
+ * @package Leo108\CorpWeChat\Models\Messages\Traits
  */
 trait ChatMessageTrait
 {

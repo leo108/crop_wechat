@@ -6,13 +6,13 @@
  * Time: 10:09
  */
 
-namespace CorpWeChat\Models\Messages\Interfaces;
+namespace Leo108\CorpWeChat\Models\Messages\Interfaces;
 
-use CorpWeChat\Models\Messages\Users\BroadCastReceivers;
+use Leo108\CorpWeChat\Models\Messages\Users\BroadCastReceivers;
 
 /**
  * Interface BroadCastMessageInterface
- * @package CorpWeChat\Models\Messages\Interfaces
+ * @package Leo108\CorpWeChat\Models\Messages\Interfaces
  */
 interface BroadCastMessageInterface
 {

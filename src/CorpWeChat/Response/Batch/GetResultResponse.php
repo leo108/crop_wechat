@@ -6,15 +6,15 @@
  * Time: 15:02
  */
 
-namespace CorpWeChat\Response\Batch;
+namespace Leo108\CorpWeChat\Response\Batch;
 
-use CorpWeChat\Models\BatchActions\DepartmentAction;
-use CorpWeChat\Models\BatchActions\UserAction;
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Models\BatchActions\DepartmentAction;
+use Leo108\CorpWeChat\Models\BatchActions\UserAction;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * Class GetResultResponse
- * @package CorpWeChat\Response\Batch
+ * @package Leo108\CorpWeChat\Response\Batch
  */
 class GetResultResponse extends JsonResponse
 {

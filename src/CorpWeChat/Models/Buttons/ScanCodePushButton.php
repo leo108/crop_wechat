@@ -6,11 +6,11 @@
  * Time: 17:38
  */
 
-namespace CorpWeChat\Models\Buttons;
+namespace Leo108\CorpWeChat\Models\Buttons;
 
 /**
  * Class ScanCodePushButton
- * @package CorpWeChat\Models\Buttons
+ * @package Leo108\CorpWeChat\Models\Buttons
  */
 class ScanCodePushButton extends KeyBasedButton
 {

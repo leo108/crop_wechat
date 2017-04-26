@@ -6,46 +6,52 @@
  * Time: 17:20
  */
 
-namespace CorpWeChat\Api;
+namespace Leo108\CorpWeChat\Api;
 
-use CorpWeChat\Models\AgentSetting;
-use CorpWeChat\Response\Agent\GetAgentListResponse;
-use CorpWeChat\Response\Agent\GetAgentResponse;
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Models\AgentSetting;
+use Leo108\CorpWeChat\Response\Agent\GetAgentListResponse;
+use Leo108\CorpWeChat\Response\Agent\GetAgentResponse;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * 企业号应用相关接口
  * Class Agent
- * @package CorpWeChat\Api
+ *
+ * @package Leo108\CorpWeChat\Api
  */
 class Agent extends AbstractApi
 {
     /**
      * 获取企业号应用详细信息
+     *
      * @param int $agentId
+     *
      * @return GetAgentResponse
      */
     public function get($agentId)
     {
-        return $this->httpGet('agent/get', ['agentid' => $agentId], new GetAgentResponse());
+        return new GetAgentResponse($this->httpGet('agent/get', ['agentid' => $agentId]));
     }
 
     /**
      * 设置企业号应用
+     *
      * @param AgentSetting $setting
+     *
      * @return JsonResponse
      */
     public function set(AgentSetting $setting)
     {
-        return $this->httpPostJson('agent/set', $setting->toArray(), new JsonResponse());
+        return $this->httpPostJson('agent/set', $setting->toArray());
     }
 
     /**
      * 获取企业号应用列表
+     *
      * @return GetAgentListResponse
      */
     public function getList()
     {
-        return $this->httpGet('agent/list', [], new GetAgentListResponse());
+        return new GetAgentListResponse($this->httpGet('agent/list', []));
     }
 }

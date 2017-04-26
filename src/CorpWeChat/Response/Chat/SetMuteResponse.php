@@ -6,13 +6,13 @@
  * Time: 14:58
  */
 
-namespace CorpWeChat\Response\Chat;
+namespace Leo108\CorpWeChat\Response\Chat;
 
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * Class SetMuteResponse
- * @package CorpWeChat\Response\Chat
+ * @package Leo108\CorpWeChat\Response\Chat
  */
 class SetMuteResponse extends JsonResponse
 {

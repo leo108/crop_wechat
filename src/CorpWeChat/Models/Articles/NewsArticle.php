@@ -6,17 +6,30 @@
  * Time: 17:59
  */
 
-namespace CorpWeChat\Models\Articles;
+namespace Leo108\CorpWeChat\Models\Articles;
 
 /**
  * Class NewsArticle
- * @package CorpWeChat\Models\Articles
+ *
+ * @package Leo108\CorpWeChat\Models\Articles
  */
 class NewsArticle
 {
+    /**
+     * @var string
+     */
     protected $title = '';
+    /**
+     * @var string
+     */
     protected $description = '';
+    /**
+     * @var string
+     */
     protected $url = '';
+    /**
+     * @var string
+     */
     protected $picUrl = '';
 
     /**
@@ -29,6 +42,7 @@ class NewsArticle
 
     /**
      * @param string $title
+     *
      * @return $this
      */
     public function setTitle($title)
@@ -48,6 +62,7 @@ class NewsArticle
 
     /**
      * @param string $description
+     *
      * @return $this
      */
     public function setDescription($description)
@@ -67,6 +82,7 @@ class NewsArticle
 
     /**
      * @param string $url
+     *
      * @return $this
      */
     public function setUrl($url)
@@ -86,6 +102,7 @@ class NewsArticle
 
     /**
      * @param string $picUrl
+     *
      * @return $this
      */
     public function setPicUrl($picUrl)

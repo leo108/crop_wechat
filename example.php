@@ -6,11 +6,11 @@
  * Time: 16:34
  */
 
-use CorpWeChat\Models\Config;
-use CorpWeChat\CorpWeChat;
-use CorpWeChat\Models\Messages\RequestMessage;
-use CorpWeChat\Models\Messages\TextMessage;
-use CorpWeChat\Models\Messages\Users\BroadCastReceivers;
+use Leo108\CorpWeChat\Models\Config;
+use Leo108\CorpWeChat\CorpWeChat;
+use Leo108\CorpWeChat\Models\Messages\RequestMessage;
+use Leo108\CorpWeChat\Models\Messages\TextMessage;
+use Leo108\CorpWeChat\Models\Messages\Users\BroadCastReceivers;
 
 //设置企业号信息
 $config = new Config('corpId', 'corpSecret');
@@ -46,3 +46,9 @@ $receivers->addTag(1);
 $response = $wx->message->send($receivers, $message);
 //获取发送失败的用户id列表
 $response->getInvalidUserIdList();
+
+$user = new \Leo108\CorpWeChat\Models\User();
+$user->setUserId('leo')
+    ->setName('leo chen')
+    ->setDepartment([1]);
+$wx->user->create($user);

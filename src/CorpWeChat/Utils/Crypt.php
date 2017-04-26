@@ -6,14 +6,15 @@
  * Time: 16:08
  */
 
-namespace CorpWeChat\Utils;
+namespace Leo108\CorpWeChat\Utils;
 
-use CorpWeChat\Exceptions\CryptException;
+use Leo108\CorpWeChat\Exceptions\CryptException;
 
 /**
  * 微信加解密类
  * Class Crypt
- * @package CorpWeChat\Utils
+ *
+ * @package Leo108\CorpWeChat\Utils
  */
 class Crypt
 {
@@ -60,10 +61,12 @@ class Crypt
 
     /**
      * 验证URL
+     *
      * @param string $msgSignature 签名串，对应URL参数的msg_signature
      * @param string $nonce        随机串，对应URL参数的nonce
      * @param int    $timestamp    时间戳，对应URL参数的timestamp
      * @param string $echoStr      随机串，对应URL参数的echostr
+     *
      * @return string
      */
     public function verifyURL($msgSignature, $nonce, $timestamp, $echoStr)
@@ -79,9 +82,11 @@ class Crypt
 
     /**
      * 将公众平台回复用户的消息加密打包.
+     *
      * @param string $xml       公众平台待回复用户的消息，xml格式的字符串
      * @param string $nonce     随机串，可以自己生成，也可以用URL参数的nonce
      * @param int    $timestamp 时间戳，可以自己生成，也可以用URL参数的timestamp
+     *
      * @return string 加密后的可以直接回复用户的密文，包括msg_signature, timestamp,
      *                          nonce, encrypt的xml格式的字符串
      */
@@ -108,10 +113,12 @@ class Crypt
 
     /**
      * 检验消息的真实性，并且获取解密后的明文.
+     *
      * @param string $msgSignature 签名串，对应URL参数的msg_signature
      * @param string $nonce        随机串，对应URL参数的nonce
      * @param string $timestamp    时间戳 对应URL参数的timestamp
      * @param string $postXML      密文，对应POST请求的数据
+     *
      * @return array
      */
     public function decryptMsg($msgSignature, $nonce, $timestamp, $postXML)
@@ -137,7 +144,9 @@ class Crypt
 
     /**
      * 生成SHA1签名
+     *
      * @param array $params
+     *
      * @return string
      */
     public function getSHA1($params)
@@ -149,7 +158,9 @@ class Crypt
 
     /**
      * 对明文进行加密
+     *
      * @param string $text 需要加密的明文
+     *
      * @return string 加密后的密文
      */
     protected function encrypt($text)
@@ -165,7 +176,9 @@ class Crypt
 
     /**
      * 对密文进行解密
+     *
      * @param string $encrypted 需要解密的密文
+     *
      * @return string 解密得到的明文
      */
     protected function decrypt($encrypted)
@@ -191,6 +204,7 @@ class Crypt
 
     /**
      * 随机生成16位字符串
+     *
      * @return string 生成的字符串
      */
     protected function getRandomStr()
@@ -200,7 +214,9 @@ class Crypt
 
     /**
      * 对需要加密的明文进行填充补位
+     *
      * @param string $text 需要进行填充补位操作的明文
+     *
      * @return string 补齐明文字符串
      */
     protected function encode($text)
@@ -224,7 +240,9 @@ class Crypt
 
     /**
      * 对解密后的明文进行补位删除
+     *
      * @param string $decrypted 解密后的明文
+     *
      * @return string 删除填充补位后的明文
      */
     protected function decode($decrypted)

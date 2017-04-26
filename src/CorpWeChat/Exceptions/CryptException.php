@@ -6,11 +6,12 @@
  * Time: 16:16
  */
 
-namespace CorpWeChat\Exceptions;
+namespace Leo108\CorpWeChat\Exceptions;
 
 /**
  * Class CryptException
- * @package CorpWeChat\Exceptions
+ *
+ * @package Leo108\CorpWeChat\Exceptions
  */
 class CryptException extends \RuntimeException
 {
@@ -28,6 +29,7 @@ class CryptException extends \RuntimeException
 
     /**
      * CryptException constructor.
+     *
      * @param string $code
      */
     public function __construct($code)

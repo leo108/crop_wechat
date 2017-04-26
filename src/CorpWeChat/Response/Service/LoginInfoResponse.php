@@ -6,13 +6,13 @@
  * Time: 13:15
  */
 
-namespace CorpWeChat\Response\Service;
+namespace Leo108\CorpWeChat\Response\Service;
 
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * Class LoginInfoResponse
- * @package CorpWeChat\Response\Service
+ * @package Leo108\CorpWeChat\Response\Service
  *
  * @property int   $usertype
  * @property array $user_info

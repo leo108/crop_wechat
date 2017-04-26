@@ -6,11 +6,12 @@
  * Time: 18:19
  */
 
-namespace CorpWeChat\Models;
+namespace Leo108\CorpWeChat\Models;
 
 /**
  * Class User
- * @package CorpWeChat\Models
+ *
+ * @package Leo108\CorpWeChat\Models
  */
 class User
 {
@@ -46,6 +47,7 @@ class User
 
     /**
      * @param mixed $userId
+     *
      * @return $this
      */
     public function setUserId($userId)
@@ -65,6 +67,7 @@ class User
 
     /**
      * @param mixed $name
+     *
      * @return $this
      */
     public function setName($name)
@@ -84,6 +87,7 @@ class User
 
     /**
      * @param array $departmentArr
+     *
      * @return $this
      */
     public function setDepartment(array $departmentArr)
@@ -95,6 +99,7 @@ class User
 
     /**
      * @param int $departmentId
+     *
      * @return $this
      */
     public function addDepartment($departmentId)
@@ -114,6 +119,7 @@ class User
 
     /**
      * @param mixed $position
+     *
      * @return $this
      */
     public function setPosition($position)
@@ -133,6 +139,7 @@ class User
 
     /**
      * @param mixed $mobile
+     *
      * @return $this
      */
     public function setMobile($mobile)
@@ -152,6 +159,7 @@ class User
 
     /**
      * @param int $gender
+     *
      * @return $this
      */
     public function setGender($gender)
@@ -171,6 +179,7 @@ class User
 
     /**
      * @param mixed $email
+     *
      * @return $this
      */
     public function setEmail($email)
@@ -190,6 +199,7 @@ class User
 
     /**
      * @param mixed $weixinId
+     *
      * @return $this
      */
     public function setWeixinId($weixinId)
@@ -209,6 +219,7 @@ class User
 
     /**
      * @param mixed $avatar
+     *
      * @return $this
      */
     public function setAvatar($avatar)
@@ -228,6 +239,7 @@ class User
 
     /**
      * @param mixed $status
+     *
      * @return $this
      */
     public function setStatus($status)
@@ -247,6 +259,7 @@ class User
 
     /**
      * @param mixed $avatarMediaId
+     *
      * @return $this
      */
     public function setAvatarMediaId($avatarMediaId)
@@ -266,6 +279,7 @@ class User
 
     /**
      * @param array $extAttr
+     *
      * @return $this
      */
     public function setExtAttr($extAttr)

@@ -6,11 +6,11 @@
  * Time: 17:12
  */
 
-namespace CorpWeChat\Models\Messages\Traits;
+namespace Leo108\CorpWeChat\Models\Messages\Traits;
 
 /**
  * Class ResponseMessageTrait
- * @package CorpWeChat\Models\Messages\Traits
+ * @package Leo108\CorpWeChat\Models\Messages\Traits
  */
 trait ResponseMessageTrait
 {

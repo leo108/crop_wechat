@@ -6,11 +6,12 @@
  * Time: 10:20
  */
 
-namespace CorpWeChat\Exceptions;
+namespace Leo108\CorpWeChat\Exceptions;
 
 /**
  * Class ApiException
- * @package CorpWeChat\Exceptions
+ *
+ * @package Leo108\CorpWeChat\Exceptions
  */
 class ApiException extends UnexpectedResponseException
 {
@@ -22,6 +23,7 @@ class ApiException extends UnexpectedResponseException
 
     /**
      * ApiException constructor.
+     *
      * @param string $apiMsg  服务器返回的错误消息
      * @param int    $apiCode 服务器返回的错误码
      */
@@ -34,6 +36,7 @@ class ApiException extends UnexpectedResponseException
 
     /**
      * 获取服务器返回的错误码
+     *
      * @return int
      */
     public function getApiCode()
@@ -43,6 +46,7 @@ class ApiException extends UnexpectedResponseException
 
     /**
      * 获取服务器返回的错误消息
+     *
      * @return string
      */
     public function getApiMsg()

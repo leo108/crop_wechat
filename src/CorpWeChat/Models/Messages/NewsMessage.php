@@ -6,17 +6,17 @@
  * Time: 17:34
  */
 
-namespace CorpWeChat\Models\Messages;
+namespace Leo108\CorpWeChat\Models\Messages;
 
-use CorpWeChat\Models\Articles\NewsArticle;
-use CorpWeChat\Models\Messages\Interfaces\BroadCastMessageInterface;
-use CorpWeChat\Models\Messages\Interfaces\ResponseMessageInterface;
-use CorpWeChat\Models\Messages\Traits\BroadCastMessageTrait;
-use CorpWeChat\Models\Messages\Traits\ResponseMessageTrait;
+use Leo108\CorpWeChat\Models\Articles\NewsArticle;
+use Leo108\CorpWeChat\Models\Messages\Interfaces\BroadCastMessageInterface;
+use Leo108\CorpWeChat\Models\Messages\Interfaces\ResponseMessageInterface;
+use Leo108\CorpWeChat\Models\Messages\Traits\BroadCastMessageTrait;
+use Leo108\CorpWeChat\Models\Messages\Traits\ResponseMessageTrait;
 
 /**
  * Class NewsMessage
- * @package CorpWeChat\Models\Messages
+ * @package Leo108\CorpWeChat\Models\Messages
  */
 class NewsMessage extends AbstractMessage implements BroadCastMessageInterface, ResponseMessageInterface
 {

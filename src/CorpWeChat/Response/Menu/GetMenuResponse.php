@@ -6,23 +6,23 @@
  * Time: 13:24
  */
 
-namespace CorpWeChat\Response\Menu;
+namespace Leo108\CorpWeChat\Response\Menu;
 
-use CorpWeChat\Models\Buttons\AbstractButton;
-use CorpWeChat\Models\Buttons\ClickButton;
-use CorpWeChat\Models\Buttons\LocationSelectButton;
-use CorpWeChat\Models\Buttons\PicPhotoOrAlbumButton;
-use CorpWeChat\Models\Buttons\PicSysPhotoButton;
-use CorpWeChat\Models\Buttons\PicWeixinButton;
-use CorpWeChat\Models\Buttons\ScanCodePushButton;
-use CorpWeChat\Models\Buttons\ScanCodeWaitMsgButton;
-use CorpWeChat\Models\Buttons\SubButton;
-use CorpWeChat\Models\Buttons\ViewButton;
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Models\Buttons\AbstractButton;
+use Leo108\CorpWeChat\Models\Buttons\ClickButton;
+use Leo108\CorpWeChat\Models\Buttons\LocationSelectButton;
+use Leo108\CorpWeChat\Models\Buttons\PicPhotoOrAlbumButton;
+use Leo108\CorpWeChat\Models\Buttons\PicSysPhotoButton;
+use Leo108\CorpWeChat\Models\Buttons\PicWeixinButton;
+use Leo108\CorpWeChat\Models\Buttons\ScanCodePushButton;
+use Leo108\CorpWeChat\Models\Buttons\ScanCodeWaitMsgButton;
+use Leo108\CorpWeChat\Models\Buttons\SubButton;
+use Leo108\CorpWeChat\Models\Buttons\ViewButton;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * Class GetMenuResponse
- * @package CorpWeChat\Response\Menu
+ * @package Leo108\CorpWeChat\Response\Menu
  */
 class GetMenuResponse extends JsonResponse
 {

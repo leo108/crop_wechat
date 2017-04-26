@@ -6,18 +6,20 @@
  * Time: 17:01
  */
 
-namespace CorpWeChat\Models\Messages\Traits;
+namespace Leo108\CorpWeChat\Models\Messages\Traits;
 
-use CorpWeChat\Models\Messages\Users\BroadCastReceivers;
+use Leo108\CorpWeChat\Models\Messages\Users\BroadCastReceivers;
 
 /**
  * Class BroadCastMessageTrait
- * @package CorpWeChat\Models\Messages\Traits
+ *
+ * @package Leo108\CorpWeChat\Models\Messages\Traits
  */
 trait BroadCastMessageTrait
 {
     /**
      * @param BroadCastReceivers $receivers
+     *
      * @return array
      */
     public function toBroadCastMessage(BroadCastReceivers $receivers)

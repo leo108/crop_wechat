@@ -6,13 +6,13 @@
  * Time: 16:03
  */
 
-namespace CorpWeChat\Response\User;
+namespace Leo108\CorpWeChat\Response\User;
 
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * Class ToUserIdResponse
- * @package CorpWeChat\Response\User
+ * @package Leo108\CorpWeChat\Response\User
  *
  * @property string $userid
  */

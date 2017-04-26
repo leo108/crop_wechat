@@ -6,13 +6,13 @@
  * Time: 14:06
  */
 
-namespace CorpWeChat\Response\Agent;
+namespace Leo108\CorpWeChat\Response\Agent;
 
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * Class GetAgentResponse
- * @package CorpWeChat\Response\Agent
+ * @package Leo108\CorpWeChat\Response\Agent
  *
  * @property int    $agentid
  * @property string $name

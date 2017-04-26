@@ -6,20 +6,42 @@
  * Time: 18:01
  */
 
-namespace CorpWeChat\Models\Articles;
+namespace Leo108\CorpWeChat\Models\Articles;
 
 /**
  * Class MpNewArticle
- * @package CorpWeChat\Models\Articles
+ *
+ * @package Leo108\CorpWeChat\Models\Articles
  */
 class MpNewArticle
 {
+    /**
+     * @var string
+     */
     protected $title = '';
+    /**
+     * @var string
+     */
     protected $thumbMediaId = '';
+    /**
+     * @var string
+     */
     protected $author = '';
+    /**
+     * @var string
+     */
     protected $contentSourceUrl = '';
+    /**
+     * @var string
+     */
     protected $content = '';
+    /**
+     * @var string
+     */
     protected $digest = '';
+    /**
+     * @var string
+     */
     protected $showCoverPic = '';
 
     /**
@@ -32,6 +54,7 @@ class MpNewArticle
 
     /**
      * @param string $title
+     *
      * @return $this
      */
     public function setTitle($title)
@@ -51,6 +74,7 @@ class MpNewArticle
 
     /**
      * @param string $thumbMediaId
+     *
      * @return $this
      */
     public function setThumbMediaId($thumbMediaId)
@@ -70,6 +94,7 @@ class MpNewArticle
 
     /**
      * @param string $author
+     *
      * @return $this
      */
     public function setAuthor($author)
@@ -89,6 +114,7 @@ class MpNewArticle
 
     /**
      * @param string $contentSourceUrl
+     *
      * @return $this
      */
     public function setContentSourceUrl($contentSourceUrl)
@@ -108,6 +134,7 @@ class MpNewArticle
 
     /**
      * @param string $content
+     *
      * @return $this
      */
     public function setContent($content)
@@ -127,6 +154,7 @@ class MpNewArticle
 
     /**
      * @param string $digest
+     *
      * @return $this
      */
     public function setDigest($digest)
@@ -146,6 +174,7 @@ class MpNewArticle
 
     /**
      * @param string $showCoverPic
+     *
      * @return $this
      */
     public function setShowCoverPic($showCoverPic)

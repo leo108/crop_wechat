@@ -6,14 +6,14 @@
  * Time: 10:19
  */
 
-namespace CorpWeChat\Models\Messages;
+namespace Leo108\CorpWeChat\Models\Messages;
 
-use CorpWeChat\Models\Messages\Interfaces\ChatMessageInterface;
-use CorpWeChat\Models\Messages\Traits\ChatMessageTrait;
+use Leo108\CorpWeChat\Models\Messages\Interfaces\ChatMessageInterface;
+use Leo108\CorpWeChat\Models\Messages\Traits\ChatMessageTrait;
 
 /**
  * Class LinkMessage
- * @package CorpWeChat\Models\Messages
+ * @package Leo108\CorpWeChat\Models\Messages
  */
 class LinkMessage extends AbstractMessage implements ChatMessageInterface
 {

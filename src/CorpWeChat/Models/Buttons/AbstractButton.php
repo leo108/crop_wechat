@@ -6,11 +6,11 @@
  * Time: 17:24
  */
 
-namespace CorpWeChat\Models\Buttons;
+namespace Leo108\CorpWeChat\Models\Buttons;
 
 /**
  * Class BaseButton
- * @package CorpWeChat\Models\Buttons
+ * @package Leo108\CorpWeChat\Models\Buttons
  */
 abstract class AbstractButton
 {

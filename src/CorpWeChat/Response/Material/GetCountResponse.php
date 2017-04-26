@@ -6,13 +6,13 @@
  * Time: 13:53
  */
 
-namespace CorpWeChat\Response\Material;
+namespace Leo108\CorpWeChat\Response\Material;
 
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * Class GetCountResponse
- * @package CorpWeChat\Response\Material
+ * @package Leo108\CorpWeChat\Response\Material
  *
  * @property int $total_count
  * @property int $image_count

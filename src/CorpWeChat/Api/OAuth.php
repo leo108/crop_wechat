@@ -6,11 +6,11 @@
  * Time: 11:13
  */
 
-namespace CorpWeChat\Api;
+namespace Leo108\CorpWeChat\Api;
 
 /**
  * Class OAuth
- * @package CorpWeChat\Api
+ * @package Leo108\CorpWeChat\Api
  */
 class OAuth extends AbstractApi
 {

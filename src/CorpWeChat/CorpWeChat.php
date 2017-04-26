@@ -6,21 +6,22 @@
  * Time: 10:12
  */
 
-namespace CorpWeChat;
+namespace Leo108\CorpWeChat;
 
-use Fig\Cache\Memory\MemoryPool;
 use GuzzleHttp\Client;
+use Leo108\CorpWeChat\Utils\MemoryCache;
 use Psr\Http\Message\RequestInterface;
 use Psr\Log\LoggerInterface;
-use Psr\Cache\CacheItemPoolInterface;
 use Psr\Log\NullLogger;
-use CorpWeChat\AgentCallBack\CallBackHandler;
-use CorpWeChat\Models\Config;
-use \ReflectionClass;
+use Leo108\CorpWeChat\AgentCallBack\CallBackHandler;
+use Leo108\CorpWeChat\Models\Config;
+use Psr\SimpleCache\CacheInterface;
+use ReflectionClass;
 
 /**
  * Class CorpWeChat
- * @package CorpWeChat
+ *
+ * @package Leo108\CorpWeChat
  *
  * @property Api\Agent      $agent
  * @property Api\Batch      $batch
@@ -46,7 +47,7 @@ class CorpWeChat
      */
     protected $config;
     /**
-     * @var PsrCacheAdapter
+     * @var CacheInterface
      */
     protected $cache;
     /**
@@ -66,11 +67,12 @@ class CorpWeChat
 
     /**
      * CorpWeChat constructor.
-     * @param Config                 $config
-     * @param CacheItemPoolInterface $cache
-     * @param LoggerInterface        $log
+     *
+     * @param Config          $config
+     * @param CacheInterface  $cache
+     * @param LoggerInterface $log
      */
-    public function __construct(Config $config, CacheItemPoolInterface $cache = null, LoggerInterface $log = null)
+    public function __construct(Config $config, CacheInterface $cache = null, LoggerInterface $log = null)
     {
         $this->config     = $config;
         $this->httpClient = new Client($this->config->getHttpConfig());
@@ -79,7 +81,7 @@ class CorpWeChat
     }
 
     /**
-     * @return PsrCacheAdapter
+     * @return CacheInterface
      */
     public function getCache()
     {
@@ -87,11 +89,14 @@ class CorpWeChat
     }
 
     /**
-     * @param CacheItemPoolInterface $cache
+     * @param CacheInterface $cache
      */
     public function setCache($cache)
     {
-        $this->cache = new PsrCacheAdapter($cache ?: new MemoryPool());
+        if (is_null($cache)) {
+            $cache = new MemoryCache();
+        }
+        $this->cache = $cache;
     }
 
     /**
@@ -128,6 +133,7 @@ class CorpWeChat
 
     /**
      * @param bool $cache
+     *
      * @return string
      */
     public function getAccessToken($cache = true)
@@ -138,6 +144,7 @@ class CorpWeChat
     /**
      *
      * @param string $name
+     *
      * @return mixed|null
      */
     public function __get($name)
@@ -171,9 +178,11 @@ class CorpWeChat
 
     /**
      * 被动响应消息
+     *
      * @param string           $name
      * @param RequestInterface $request
      * @param callable         $handler
+     *
      * @return string
      */
     public function handleAgentCallBack($name, RequestInterface $request, callable $handler)

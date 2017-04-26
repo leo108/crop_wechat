@@ -6,21 +6,34 @@
  * Time: 15:06
  */
 
-namespace CorpWeChat\Models\BatchActions;
+namespace Leo108\CorpWeChat\Models\BatchActions;
 
 /**
  * Class UserAction
- * @package CorpWeChat\Models\BatchActions
+ *
+ * @package Leo108\CorpWeChat\Models\BatchActions
  */
 class UserAction
 {
+    /**
+     * @var string
+     */
     protected $action;
+    /**
+     * @var integer
+     */
     protected $userId;
+    /**
+     * @var integer
+     */
     protected $errCode;
+    /**
+     * @var string
+     */
     protected $errMsg;
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getAction()
     {
@@ -28,7 +41,8 @@ class UserAction
     }
 
     /**
-     * @param mixed $action
+     * @param $action
+     *
      * @return $this
      */
     public function setAction($action)
@@ -39,7 +53,7 @@ class UserAction
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getUserId()
     {
@@ -47,7 +61,8 @@ class UserAction
     }
 
     /**
-     * @param mixed $userId
+     * @param $userId
+     *
      * @return $this
      */
     public function setUserId($userId)
@@ -58,7 +73,7 @@ class UserAction
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getErrCode()
     {
@@ -66,7 +81,8 @@ class UserAction
     }
 
     /**
-     * @param mixed $errCode
+     * @param $errCode
+     *
      * @return $this
      */
     public function setErrCode($errCode)
@@ -77,7 +93,7 @@ class UserAction
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getErrMsg()
     {
@@ -85,7 +101,8 @@ class UserAction
     }
 
     /**
-     * @param mixed $errMsg
+     * @param $errMsg
+     *
      * @return $this
      */
     public function setErrMsg($errMsg)

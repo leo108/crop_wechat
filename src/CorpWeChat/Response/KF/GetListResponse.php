@@ -6,13 +6,13 @@
  * Time: 14:27
  */
 
-namespace CorpWeChat\Response\KF;
+namespace Leo108\CorpWeChat\Response\KF;
 
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * Class GetListResponse
- * @package CorpWeChat\Response\KF
+ * @package Leo108\CorpWeChat\Response\KF
  *
  * @property array $internal
  * @property array $external

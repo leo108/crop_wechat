@@ -6,13 +6,13 @@
  * Time: 15:01
  */
 
-namespace CorpWeChat\Response\Batch;
+namespace Leo108\CorpWeChat\Response\Batch;
 
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * Class CreateResponse
- * @package CorpWeChat\Response\Batch
+ * @package Leo108\CorpWeChat\Response\Batch
  *
  * @property string $jobid
  */

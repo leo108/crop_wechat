@@ -6,14 +6,14 @@
  * Time: 12:29
  */
 
-namespace CorpWeChat\Response\User;
+namespace Leo108\CorpWeChat\Response\User;
 
-use CorpWeChat\Models\User;
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Models\User;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * Class DetailListResponse
- * @package CorpWeChat\Response\User
+ * @package Leo108\CorpWeChat\Response\User
  */
 class DetailListResponse extends JsonResponse
 {

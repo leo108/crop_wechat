@@ -6,13 +6,13 @@
  * Time: 12:48
  */
 
-namespace CorpWeChat\Response\Common;
+namespace Leo108\CorpWeChat\Response\Common;
 
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * Class GetCallBackIPResponse
- * @package CorpWeChat\Response\Common
+ * @package Leo108\CorpWeChat\Response\Common
  *
  * @property array $ip_list
  */

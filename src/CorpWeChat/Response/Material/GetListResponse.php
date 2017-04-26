@@ -6,17 +6,17 @@
  * Time: 14:01
  */
 
-namespace CorpWeChat\Response\Material;
+namespace Leo108\CorpWeChat\Response\Material;
 
-use CorpWeChat\Exceptions\UnexpectedResponseException;
-use CorpWeChat\Models\Articles\MpNewArticle;
-use CorpWeChat\Models\MaterialItems\ImageItem;
-use CorpWeChat\Models\MaterialItems\MpNewsItem;
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Exceptions\UnexpectedResponseException;
+use Leo108\CorpWeChat\Models\Articles\MpNewArticle;
+use Leo108\CorpWeChat\Models\MaterialItems\ImageItem;
+use Leo108\CorpWeChat\Models\MaterialItems\MpNewsItem;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * Class GetListResponse
- * @package CorpWeChat\Response\Material
+ * @package Leo108\CorpWeChat\Response\Material
  */
 class GetListResponse extends JsonResponse
 {

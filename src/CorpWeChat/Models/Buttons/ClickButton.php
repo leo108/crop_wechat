@@ -6,11 +6,11 @@
  * Time: 17:24
  */
 
-namespace CorpWeChat\Models\Buttons;
+namespace Leo108\CorpWeChat\Models\Buttons;
 
 /**
  * Class ClickButton
- * @package CorpWeChat\Models\Buttons
+ * @package Leo108\CorpWeChat\Models\Buttons
  */
 class ClickButton extends KeyBasedButton
 {

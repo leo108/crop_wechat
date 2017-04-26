@@ -6,11 +6,11 @@
  * Time: 17:19
  */
 
-namespace CorpWeChat\Models\Messages;
+namespace Leo108\CorpWeChat\Models\Messages;
 
 /**
  * Class AbstractMessage
- * @package CorpWeChat\Models\Messages
+ * @package Leo108\CorpWeChat\Models\Messages
  */
 abstract class AbstractMessage
 {
@@ -21,7 +21,7 @@ abstract class AbstractMessage
      */
     public function getType()
     {
-        preg_match('~\(.+)$~', static::class, $m);
+        preg_match('~\\\\([^\\\\]+)message$~i', static::class, $m);
 
         return strtolower($m[1]);
     }

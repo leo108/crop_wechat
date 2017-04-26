@@ -6,17 +6,18 @@
  * Time: 09:47
  */
 
-namespace CorpWeChat\Api;
+namespace Leo108\CorpWeChat\Api;
 
-use CorpWeChat\Models\Messages\Interfaces\KFMessageInterface;
-use CorpWeChat\Models\Messages\Users\KFUser;
-use CorpWeChat\Response\JsonResponse;
-use CorpWeChat\Response\KF\GetListResponse;
+use Leo108\CorpWeChat\Models\Messages\Interfaces\KFMessageInterface;
+use Leo108\CorpWeChat\Models\Messages\Users\KFUser;
+use Leo108\CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Response\KF\GetListResponse;
 
 /**
  * 客服相关接口
  * Class KF
- * @package CorpWeChat\Api
+ *
+ * @package Leo108\CorpWeChat\Api
  */
 class KF extends AbstractApi
 {
@@ -25,19 +26,23 @@ class KF extends AbstractApi
 
     /**
      * 发送客服消息
+     *
      * @param KFUser             $sender
      * @param KFUser             $receiver
      * @param KFMessageInterface $message
+     *
      * @return JsonResponse
      */
     public function send(KFUser $sender, KFUser $receiver, KFMessageInterface $message)
     {
-        return $this->httpPostJson('kf/send', $message->toKFMessage($sender, $receiver), new JsonResponse());
+        return new JsonResponse($this->httpPostJson('kf/send', $message->toKFMessage($sender, $receiver)));
     }
 
     /**
      * 获取客服列表
+     *
      * @param null|string $type
+     *
      * @return GetListResponse
      */
     public function getList($type = null)
@@ -47,6 +52,6 @@ class KF extends AbstractApi
             $req['type'] = $type;
         }
 
-        return $this->httpGet('kf/list', $req, new GetListResponse());
+        return new GetListResponse($this->httpGet('kf/list', $req));
     }
 }

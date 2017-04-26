@@ -6,21 +6,34 @@
  * Time: 15:06
  */
 
-namespace CorpWeChat\Models\BatchActions;
+namespace Leo108\CorpWeChat\Models\BatchActions;
 
 /**
  * Class DepartmentAction
- * @package CorpWeChat\Models\BatchActions
+ *
+ * @package Leo108\CorpWeChat\Models\BatchActions
  */
 class DepartmentAction
 {
+    /**
+     * @var string
+     */
     protected $action;
+    /**
+     * @var integer
+     */
     protected $departmentId;
+    /**
+     * @var integer
+     */
     protected $errCode;
+    /**
+     * @var string
+     */
     protected $errMsg;
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getAction()
     {
@@ -28,7 +41,8 @@ class DepartmentAction
     }
 
     /**
-     * @param mixed $action
+     * @param string $action
+     *
      * @return $this
      */
     public function setAction($action)
@@ -39,7 +53,7 @@ class DepartmentAction
     }
 
     /**
-     * @return mixed
+     * @return integer
      */
     public function getDepartmentId()
     {
@@ -47,7 +61,8 @@ class DepartmentAction
     }
 
     /**
-     * @param mixed $departmentId
+     * @param integer $departmentId
+     *
      * @return $this
      */
     public function setDepartmentId($departmentId)
@@ -58,7 +73,7 @@ class DepartmentAction
     }
 
     /**
-     * @return mixed
+     * @return integer
      */
     public function getErrCode()
     {
@@ -66,7 +81,8 @@ class DepartmentAction
     }
 
     /**
-     * @param mixed $errCode
+     * @param integer $errCode
+     *
      * @return $this
      */
     public function setErrCode($errCode)
@@ -77,7 +93,7 @@ class DepartmentAction
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getErrMsg()
     {
@@ -85,7 +101,8 @@ class DepartmentAction
     }
 
     /**
-     * @param mixed $errMsg
+     * @param string $errMsg
+     *
      * @return $this
      */
     public function setErrMsg($errMsg)

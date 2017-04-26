@@ -6,11 +6,11 @@
  * Time: 14:22
  */
 
-namespace CorpWeChat\Models\Messages\Users;
+namespace Leo108\CorpWeChat\Models\Messages\Users;
 
 /**
  * Class KFUser
- * @package CorpWeChat\Models\Messages\Users
+ * @package Leo108\CorpWeChat\Models\Messages\Users
  */
 class KFUser
 {

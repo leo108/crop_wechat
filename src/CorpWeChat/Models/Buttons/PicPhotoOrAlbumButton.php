@@ -6,11 +6,11 @@
  * Time: 17:40
  */
 
-namespace CorpWeChat\Models\Buttons;
+namespace Leo108\CorpWeChat\Models\Buttons;
 
 /**
  * Class PicPhotoOrAlbumButton
- * @package CorpWeChat\Models\Buttons
+ * @package Leo108\CorpWeChat\Models\Buttons
  */
 class PicPhotoOrAlbumButton extends KeyBasedButton
 {

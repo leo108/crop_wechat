@@ -6,11 +6,11 @@
  * Time: 10:50
  */
 
-namespace CorpWeChat\Models;
+namespace Leo108\CorpWeChat\Models;
 
 /**
  * Class Config
- * @package CorpWeChat\Models
+ * @package Leo108\CorpWeChat\Models
  */
 class Config
 {

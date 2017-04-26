@@ -6,13 +6,13 @@
  * Time: 12:42
  */
 
-namespace CorpWeChat\Response\Tag;
+namespace Leo108\CorpWeChat\Response\Tag;
 
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * Class ModifyResponse
- * @package CorpWeChat\Response\Tag
+ * @package Leo108\CorpWeChat\Response\Tag
  */
 class ModifyResponse extends JsonResponse
 {

@@ -6,11 +6,11 @@
  * Time: 10:05
  */
 
-namespace CorpWeChat\Models\Messages\Interfaces;
+namespace Leo108\CorpWeChat\Models\Messages\Interfaces;
 
 /**
  * Interface ResponseMessageInterface
- * @package CorpWeChat\Models\Messages\Interfaces
+ * @package Leo108\CorpWeChat\Models\Messages\Interfaces
  */
 interface ResponseMessageInterface
 {

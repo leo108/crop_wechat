@@ -6,13 +6,13 @@
  * Time: 13:13
  */
 
-namespace CorpWeChat\Response\Service;
+namespace Leo108\CorpWeChat\Response\Service;
 
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * Class LoginUrlResponse
- * @package CorpWeChat\Response\Service
+ * @package Leo108\CorpWeChat\Response\Service
  *
  * @property string $login_url
  * @property int    $expires_in

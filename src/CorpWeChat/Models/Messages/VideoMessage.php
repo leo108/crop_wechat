@@ -6,16 +6,16 @@
  * Time: 17:31
  */
 
-namespace CorpWeChat\Models\Messages;
+namespace Leo108\CorpWeChat\Models\Messages;
 
-use CorpWeChat\Models\Messages\Interfaces\BroadCastMessageInterface;
-use CorpWeChat\Models\Messages\Interfaces\ResponseMessageInterface;
-use CorpWeChat\Models\Messages\Traits\BroadCastMessageTrait;
-use CorpWeChat\Models\Messages\Traits\ResponseMessageTrait;
+use Leo108\CorpWeChat\Models\Messages\Interfaces\BroadCastMessageInterface;
+use Leo108\CorpWeChat\Models\Messages\Interfaces\ResponseMessageInterface;
+use Leo108\CorpWeChat\Models\Messages\Traits\BroadCastMessageTrait;
+use Leo108\CorpWeChat\Models\Messages\Traits\ResponseMessageTrait;
 
 /**
  * Class VideoMessage
- * @package CorpWeChat\Models\Messages
+ * @package Leo108\CorpWeChat\Models\Messages
  */
 class VideoMessage extends AbstractMessage implements BroadCastMessageInterface, ResponseMessageInterface
 {

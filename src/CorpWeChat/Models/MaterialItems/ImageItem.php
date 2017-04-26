@@ -6,11 +6,11 @@
  * Time: 14:07
  */
 
-namespace CorpWeChat\Models\MaterialItems;
+namespace Leo108\CorpWeChat\Models\MaterialItems;
 
 /**
  * Class ImageItem
- * @package CorpWeChat\Models\MaterialItems
+ * @package Leo108\CorpWeChat\Models\MaterialItems
  */
 class ImageItem
 {

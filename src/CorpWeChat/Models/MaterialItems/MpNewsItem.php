@@ -6,13 +6,13 @@
  * Time: 14:07
  */
 
-namespace CorpWeChat\Models\MaterialItems;
+namespace Leo108\CorpWeChat\Models\MaterialItems;
 
-use CorpWeChat\Models\Articles\MpNewArticle;
+use Leo108\CorpWeChat\Models\Articles\MpNewArticle;
 
 /**
  * Class MpNewsItem
- * @package CorpWeChat\Models\MaterialItems
+ * @package Leo108\CorpWeChat\Models\MaterialItems
  */
 class MpNewsItem
 {

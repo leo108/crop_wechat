@@ -6,13 +6,13 @@
  * Time: 10:08
  */
 
-namespace CorpWeChat\Models\Messages\Interfaces;
+namespace Leo108\CorpWeChat\Models\Messages\Interfaces;
 
-use CorpWeChat\Models\Messages\Users\ChatReceiver;
+use Leo108\CorpWeChat\Models\Messages\Users\ChatReceiver;
 
 /**
  * Interface ChatMessageInterface
- * @package CorpWeChat\Models\Messages\Interfaces
+ * @package Leo108\CorpWeChat\Models\Messages\Interfaces
  */
 interface ChatMessageInterface
 {

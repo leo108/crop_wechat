@@ -6,13 +6,13 @@
  * Time: 13:38
  */
 
-namespace CorpWeChat\Response\Media;
+namespace Leo108\CorpWeChat\Response\Media;
 
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * Class UploadImgResponse
- * @package CorpWeChat\Response\Media
+ * @package Leo108\CorpWeChat\Response\Media
  *
  * @property string $url
  */

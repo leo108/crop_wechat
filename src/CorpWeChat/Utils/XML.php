@@ -6,12 +6,13 @@
  * Time: 16:11
  */
 
-namespace CorpWeChat\Utils;
+namespace Leo108\CorpWeChat\Utils;
 
 /**
  * XML操作类
  * Class XML
- * @package CorpWeChat\Utils
+ *
+ * @package Leo108\CorpWeChat\Utils
  * @link    https://github.com/overtrue/wechat/blob/1a78084ce26367e832597fc49645717a5b01b85c/src/Support/XML.php
  */
 class XML
@@ -51,8 +52,8 @@ class XML
         $attr = trim($attr);
         $attr = empty($attr) ? '' : " {$attr}";
         $xml  = "<{$root}{$attr}>";
-        $xml .= self::data2Xml($data, $item, $id);
-        $xml .= "</{$root}>";
+        $xml  .= self::data2Xml($data, $item, $id);
+        $xml  .= "</{$root}>";
 
         return $xml;
     }
@@ -80,7 +81,7 @@ class XML
     {
         $result = null;
         if (is_object($obj)) {
-            $obj = (array) $obj;
+            $obj = (array)$obj;
         }
         if (is_array($obj)) {
             foreach ($obj as $key => $value) {
@@ -117,7 +118,7 @@ class XML
             }
             $xml .= "<{$key}{$attr}>";
             if ((is_array($val) || is_object($val))) {
-                $xml .= self::data2Xml((array) $val, $item, $id);
+                $xml .= self::data2Xml((array)$val, $item, $id);
             } else {
                 $xml .= is_numeric($val) ? $val : self::cdata($val);
             }

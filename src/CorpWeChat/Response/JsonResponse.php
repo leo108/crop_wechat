@@ -6,20 +6,30 @@
  * Time: 10:58
  */
 
-namespace CorpWeChat\Response;
+namespace Leo108\CorpWeChat\Response;
 
-use CorpWeChat\Exceptions\UnexpectedResponseException;
-use CorpWeChat\Exceptions\ApiException;
+use Leo108\CorpWeChat\Exceptions\UnexpectedResponseException;
+use Leo108\CorpWeChat\Exceptions\ApiException;
 
 /**
  * 格式为JSON字符串的响应
  * Class JsonResponse
- * @package CorpWeChat\Response
+ *
+ * @package Leo108\CorpWeChat\Response
  */
 class JsonResponse extends BaseResponse
 {
+    /**
+     * @var array
+     */
     protected static $allowFields = [];
+    /**
+     * @var array
+     */
     protected static $requiredFields = [];
+    /**
+     * @var array
+     */
     protected $jsonData = [];
 
     /**
@@ -32,6 +42,7 @@ class JsonResponse extends BaseResponse
 
     /**
      * @param string $name
+     *
      * @return mixed|null
      */
     public function __get($name)
@@ -41,6 +52,7 @@ class JsonResponse extends BaseResponse
 
     /**
      * @param string $name
+     *
      * @return mixed|null
      */
     public function get($name)
@@ -68,13 +80,16 @@ class JsonResponse extends BaseResponse
 
     /**
      * @param array $arr
+     *
      * @return mixed
      */
     protected function filter($arr)
     {
-        foreach ($arr as $k => $v) {
-            if (!in_array($k, static::$allowFields)) {
-                unset($arr[$k]);
+        if (!empty(static::$allowFields)) {
+            foreach ($arr as $k => $v) {
+                if (!in_array($k, static::$allowFields)) {
+                    unset($arr[$k]);
+                }
             }
         }
 

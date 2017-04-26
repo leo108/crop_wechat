@@ -6,11 +6,11 @@
  * Time: 09:57
  */
 
-namespace CorpWeChat\Models\Messages;
+namespace Leo108\CorpWeChat\Models\Messages;
 
 /**
  * Class RequestMessage
- * @package CorpWeChat\Models\Messages
+ * @package Leo108\CorpWeChat\Models\Messages
  *
  * @property string $ToUserName
  * @property string $FromUserName

@@ -16,11 +16,11 @@
 ```php
 <?php
 
-use CorpWeChat\Models\Config;
-use CorpWeChat\CorpWeChat;
-use CorpWeChat\Models\Messages\RequestMessage;
-use CorpWeChat\Models\Messages\TextMessage;
-use CorpWeChat\Models\Messages\Users\BroadCastReceivers;
+use Leo108\CorpWeChat\Models\Config;
+use Leo108\CorpWeChat\CorpWeChat;
+use Leo108\CorpWeChat\Models\Messages\RequestMessage;
+use Leo108\CorpWeChat\Models\Messages\TextMessage;
+use Leo108\CorpWeChat\Models\Messages\Users\BroadCastReceivers;
 
 //设置企业号信息
 $config = new Config('corpId', 'corpSecret');
@@ -58,11 +58,10 @@ $response = $wx->message->send($receivers, $message);
 $response->getInvalidUserIdList();
 ```
 
-更多使用文档请查看Wiki
+更多使用文档请查看[Wiki](https://github.com/leo108/crop_wechat/wiki)
 
 ## 感谢
 
-* [aws-sdk-php](https://github.com/aws/aws-sdk-php)
 * [EasyWeChat](https://github.com/overtrue/wechat)
 
 ## 开源协议

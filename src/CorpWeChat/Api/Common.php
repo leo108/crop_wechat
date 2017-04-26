@@ -6,21 +6,24 @@
  * Time: 11:36
  */
 
-namespace CorpWeChat\Api;
+namespace Leo108\CorpWeChat\Api;
 
-use CorpWeChat\Response\Common\GetCallBackIPResponse;
-use CorpWeChat\Response\Common\GetTokenResponse;
+use Leo108\CorpWeChat\Response\Common\GetCallBackIPResponse;
+use Leo108\CorpWeChat\Response\Common\GetTokenResponse;
 
 /**
  * 通用服务接口
  * Class Common
- * @package CorpWeChat\Api
+ *
+ * @package Leo108\CorpWeChat\Api
  */
 class Common extends AbstractApi
 {
     /**
      * 通过id和secret换取access token
+     *
      * @param bool $cache true代表先读缓存
+     *
      * @return string
      */
     public function getAccessToken($cache = true)
@@ -31,8 +34,7 @@ class Common extends AbstractApi
             md5($this->wx->getConfig()->getCorpId().$this->wx->getConfig()->getSecret())
         );
         if ($cache) {
-            $token = $this->wx->getCache()->get($cacheKey);
-            if ($token) {
+            if ($token = $this->wx->getCache()->get($cacheKey)) {
                 return $token;
             }
         }
@@ -46,11 +48,12 @@ class Common extends AbstractApi
 
     /**
      * 获取微信服务器的ip段
+     *
      * @return GetCallBackIPResponse
      */
     public function getCallBackIP()
     {
-        return $this->httpGet('getcallbackip', [], new GetCallBackIPResponse());
+        return new GetCallBackIPResponse($this->httpGet('getcallbackip', []));
     }
 
     /**
@@ -63,6 +66,6 @@ class Common extends AbstractApi
             'corpsecret' => $this->wx->getConfig()->getSecret(),
         ];
 
-        return $this->httpGet('gettoken', $param, new GetTokenResponse());
+        return new GetTokenResponse($this->httpGet('gettoken', $param));
     }
 }

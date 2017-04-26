@@ -6,13 +6,13 @@
  * Time: 10:58
  */
 
-namespace CorpWeChat\Response\Common;
+namespace Leo108\CorpWeChat\Response\Common;
 
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * Class GetTokenResponse
- * @package CorpWeChat\Response
+ * @package Leo108\CorpWeChat\Response
  *
  * @property string $access_token
  * @property int    expires_in

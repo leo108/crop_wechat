@@ -6,24 +6,28 @@
  * Time: 17:41
  */
 
-namespace CorpWeChat\Api;
+namespace Leo108\CorpWeChat\Api;
 
-use CorpWeChat\Models\Buttons\AbstractButton;
-use CorpWeChat\Response\JsonResponse;
-use CorpWeChat\Response\Menu\GetMenuResponse;
+use Leo108\CorpWeChat\Models\Buttons\AbstractButton;
+use Leo108\CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Response\Menu\GetMenuResponse;
 
 /**
  * 菜单操作接口
  * Class Menu
- * @package CorpWeChat\Api
+ *
+ * @package Leo108\CorpWeChat\Api
  */
 class Menu extends AbstractApi
 {
     /**
      * 创建应用菜单
+     *
      * @see http://qydev.weixin.qq.com/wiki/index.php?title=%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8%E8%8F%9C%E5%8D%95
+     *
      * @param int              $agentId
      * @param AbstractButton[] $buttonArr
+     *
      * @return JsonResponse
      */
     public function create($agentId, array $buttonArr)
@@ -35,28 +39,34 @@ class Menu extends AbstractApi
             $req['button'][] = $button->toArray();
         }
 
-        return $this->httpPostJson("menu/create?agentid={$agentId}", $req, new JsonResponse());
+        return new JsonResponse($this->httpPostJson("menu/create?agentid={$agentId}", $req));
     }
 
     /**
      * 删除菜单
+     *
      * @see http://qydev.weixin.qq.com/wiki/index.php?title=%E5%88%A0%E9%99%A4%E8%8F%9C%E5%8D%95
+     *
      * @param int $agentId
+     *
      * @return JsonResponse
      */
     public function delete($agentId)
     {
-        return $this->httpGet('menu/delete', ['agentid' => $agentId], new JsonResponse());
+        return new JsonResponse($this->httpGet('menu/delete', ['agentid' => $agentId]));
     }
 
     /**
      * 获取菜单列表
+     *
      * @see http://qydev.weixin.qq.com/wiki/index.php?title=%E8%8E%B7%E5%8F%96%E8%8F%9C%E5%8D%95%E5%88%97%E8%A1%A8
+     *
      * @param int $agentId
+     *
      * @return GetMenuResponse
      */
     public function get($agentId)
     {
-        return $this->httpGet('menu/get', ['agentid' => $agentId], new GetMenuResponse());
+        return new GetMenuResponse($this->httpGet('menu/get', ['agentid' => $agentId]));
     }
 }

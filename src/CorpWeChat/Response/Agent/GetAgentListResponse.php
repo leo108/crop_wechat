@@ -6,14 +6,14 @@
  * Time: 14:12
  */
 
-namespace CorpWeChat\Response\Agent;
+namespace Leo108\CorpWeChat\Response\Agent;
 
-use CorpWeChat\Models\Agent;
-use CorpWeChat\Response\JsonResponse;
+use Leo108\CorpWeChat\Models\Agent;
+use Leo108\CorpWeChat\Response\JsonResponse;
 
 /**
  * Class GetAgentListResponse
- * @package CorpWeChat\Response\Agent
+ * @package Leo108\CorpWeChat\Response\Agent
  */
 class GetAgentListResponse extends JsonResponse
 {

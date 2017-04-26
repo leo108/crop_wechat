@@ -6,12 +6,12 @@
  * Time: 13:44
  */
 
-namespace CorpWeChat\Response;
+namespace Leo108\CorpWeChat\Response;
 
 /**
  * 格式为文件下载的响应
  * Class FileResponse
- * @package CorpWeChat\Response
+ * @package Leo108\CorpWeChat\Response
  */
 class FileResponse extends JsonResponse
 {

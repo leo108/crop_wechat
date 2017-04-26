@@ -6,11 +6,12 @@
  * Time: 09:42
  */
 
-namespace CorpWeChat\Exceptions;
+namespace Leo108\CorpWeChat\Exceptions;
 
 /**
  * Class InvalidArgumentException
- * @package CorpWeChat\Exceptions
+ *
+ * @package Leo108\CorpWeChat\Exceptions
  */
 class InvalidArgumentException extends \InvalidArgumentException
 {

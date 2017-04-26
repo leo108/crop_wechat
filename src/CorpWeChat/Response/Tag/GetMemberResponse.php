@@ -6,14 +6,14 @@
  * Time: 12:38
  */
 
-namespace CorpWeChat\Response\Tag;
+namespace Leo108\CorpWeChat\Response\Tag;
 
-use CorpWeChat\Models\User;
+use Leo108\CorpWeChat\Models\User;
 use CorpWeChat\Response\JsonResponse;
 
 /**
  * Class GetMemberResponse
- * @package CorpWeChat\Response\Tag
+ * @package Leo108\CorpWeChat\Response\Tag
  */
 class GetMemberResponse extends JsonResponse
 {

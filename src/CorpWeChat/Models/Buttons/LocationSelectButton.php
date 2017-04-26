@@ -6,11 +6,11 @@
  * Time: 17:41
  */
 
-namespace CorpWeChat\Models\Buttons;
+namespace Leo108\CorpWeChat\Models\Buttons;
 
 /**
  * Class LocationSelectButton
- * @package CorpWeChat\Models\Buttons
+ * @package Leo108\CorpWeChat\Models\Buttons
  */
 class LocationSelectButton extends KeyBasedButton
 {

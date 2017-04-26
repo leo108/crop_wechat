@@ -6,11 +6,11 @@
  * Time: 17:37
  */
 
-namespace CorpWeChat\Models\Buttons;
+namespace Leo108\CorpWeChat\Models\Buttons;
 
 /**
  * Class KeyBasedButton
- * @package CorpWeChat\Models\Buttons
+ * @package Leo108\CorpWeChat\Models\Buttons
  */
 class KeyBasedButton extends AbstractButton
 {

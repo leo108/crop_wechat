@@ -6,15 +6,15 @@
  * Time: 17:53
  */
 
-namespace CorpWeChat\Models\Messages;
+namespace Leo108\CorpWeChat\Models\Messages;
 
-use CorpWeChat\Models\Articles\MpNewArticle;
-use CorpWeChat\Models\Messages\Interfaces\BroadCastMessageInterface;
-use CorpWeChat\Models\Messages\Traits\BroadCastMessageTrait;
+use Leo108\CorpWeChat\Models\Articles\MpNewArticle;
+use Leo108\CorpWeChat\Models\Messages\Interfaces\BroadCastMessageInterface;
+use Leo108\CorpWeChat\Models\Messages\Traits\BroadCastMessageTrait;
 
 /**
  * Class MpNewsMessage
- * @package CorpWeChat\Models\Messages
+ * @package Leo108\CorpWeChat\Models\Messages
  */
 class MpNewsMessage extends AbstractMessage implements BroadCastMessageInterface
 {

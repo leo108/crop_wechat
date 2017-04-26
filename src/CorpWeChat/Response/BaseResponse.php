@@ -6,27 +6,27 @@
  * Time: 11:03
  */
 
-namespace CorpWeChat\Response;
+namespace Leo108\CorpWeChat\Response;
 
 use Psr\Http\Message\ResponseInterface;
-use CorpWeChat\Exceptions\UnexpectedResponseException;
+use Leo108\CorpWeChat\Exceptions\UnexpectedResponseException;
 
 /**
  * Class BaseResponse
- * @package CorpWeChat\Response
+ *
+ * @package Leo108\CorpWeChat\Response
  */
 class BaseResponse
 {
     /**
-     * @var ResponseInterface|null
+     * @var ResponseInterface
      */
-    protected $originResponse = null;
+    protected $originResponse;
 
     /**
      * @param ResponseInterface $response
-     * @return static
      */
-    public function setOriginResponse(ResponseInterface $response)
+    public function __construct(ResponseInterface $response)
     {
         $this->originResponse = $response;
         $this->checkResponse();
@@ -34,7 +34,7 @@ class BaseResponse
     }
 
     /**
-     * @return null|ResponseInterface
+     * @return ResponseInterface
      */
     public function getOriginResponse()
     {

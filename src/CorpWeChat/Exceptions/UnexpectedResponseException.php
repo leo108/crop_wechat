@@ -6,11 +6,12 @@
  * Time: 11:32
  */
 
-namespace CorpWeChat\Exceptions;
+namespace Leo108\CorpWeChat\Exceptions;
 
 /**
  * Class UnexpectedResponseException
- * @package CorpWeChat\Exceptions
+ *
+ * @package Leo108\CorpWeChat\Exceptions
  */
 class UnexpectedResponseException extends \UnexpectedValueException
 {
@@ -18,15 +19,17 @@ class UnexpectedResponseException extends \UnexpectedValueException
     const WECHAT_ERROR = 2;
     const API_ERROR = 3;
 
-    protected static $map = [
-        self::HTTP_ERROR   => 'non-200 response',
-        self::WECHAT_ERROR => 'a not valid wechat response',
-        self::API_ERROR    => 'api error',
-    ];
+    protected static $map
+        = [
+            self::HTTP_ERROR   => 'non-200 response',
+            self::WECHAT_ERROR => 'a not valid wechat response',
+            self::API_ERROR    => 'api error',
+        ];
     protected $context;
 
     /**
      * UnexpectedResponseException constructor.
+     *
      * @param string $code
      * @param mixed  $context
      */

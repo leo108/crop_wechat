@@ -6,11 +6,11 @@
  * Time: 15:32
  */
 
-namespace CorpWeChat\Models\Messages\Users;
+namespace Leo108\CorpWeChat\Models\Messages\Users;
 
 /**
  * Class BroadCastReceivers
- * @package CorpWeChat\Models\Messages\Users
+ * @package Leo108\CorpWeChat\Models\Messages\Users
  */
 class BroadCastReceivers
 {
